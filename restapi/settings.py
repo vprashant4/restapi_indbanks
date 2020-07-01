@@ -146,8 +146,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 if os.getcwd() == '/app':
     import dj_database_url
-    db_from_env = dj_database_url.config(conn_max_age=600, ssl_require=True)
-    DATABASES['default'].update(db_from_env)
+    DATABASES['default'] = dj_database_url.config(conn_max_age=600)
     #Honor the 'X-forwarded-Proto' header for request.is_secure().
     SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
