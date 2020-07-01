@@ -13,7 +13,6 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 import os
 from datetime import timedelta
 import django_heroku
-import dj_database_url
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -83,16 +82,16 @@ WSGI_APPLICATION = 'restapi.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-#         'NAME': 'demo_1',
-#         'USER': 'prashant4',
-#         'PASSWORD': 'hApPy143143',
-#         'HOST': 'database-1.c5cddooi5xmm.us-east-2.rds.amazonaws.com',
-#         'PORT': '5432',
-#     }
-# }
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'demo_1',
+        'USER': 'prashant4',
+        'PASSWORD': 'hApPy143143',
+        'HOST': 'database-1.c5cddooi5xmm.us-east-2.rds.amazonaws.com',
+        'PORT': '5432',
+    }
+}
 
 
 # Password validation
@@ -118,8 +117,8 @@ REST_FRAMEWORK = {
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
     'PAGE_SIZE': 10,
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
-    'DEFAULT_PERMISSION_CLASSES': ['rest_framework.permissions.IsAuthenticated'],
-    'DEFAULT_AUTHENTICATION_CLASSES': ['rest_framework.authentication.SessionAuthentication'],
+    #'DEFAULT_PERMISSION_CLASSES': ['rest_framework.permissions.IsAuthenticated'],
+    #'DEFAULT_AUTHENTICATION_CLASSES': ['rest_framework.authentication.SessionAuthentication'],
     #'DEFAULT_AUTHENTICATION_CLASSES': ('rest_framework_simplejwt.authentication.JWTAuthentication',)
 }
 
@@ -145,23 +144,25 @@ STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 
-# Allow all host hosts/domain names for this site
-ALLOWED_HOSTS = ['*']
-
 # Parse database configuration from $DATABASE_URL
+if os.getcwd() == '/app':
+    import dj_database_url
+    db_from_env = dj_database_url.config(conn_max_age=500)
+    DATABASES['default'].update(db_from_env)
 
-DATABASES = {'default': dj_database_url.config()}
+    # Honor the 'X-Forwarded-Proto' header for request.is_secure()
+    SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
-# Honor the 'X-Forwarded-Proto' header for request.is_secure()
-SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+    ALLOWED_HOSTS = ['*']
+    DEBUG = True
 
-# Static asset configuration
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    # Static asset configuration
+    BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-# Set JWT Time Duration for 5 days
-SIMPLE_JWT = {
-    'ACCESS_TOKEN_LIFETIME': timedelta(days=5),
-    'REFRESH_TOKEN_LIFETIME': timedelta(days=5),
-}
+#  Set JWT Time Duration for 5 days
+# SIMPLE_JWT = {
+#     'ACCESS_TOKEN_LIFETIME': timedelta(days=5),
+#     'REFRESH_TOKEN_LIFETIME': timedelta(days=5),
+# }
 
 django_heroku.settings(locals())
