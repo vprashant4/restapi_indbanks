@@ -84,11 +84,11 @@ WSGI_APPLICATION = 'restapi.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'indian_banks',
-        'USER': 'postgres',
-        'PASSWORD': '1431',
-        'HOST': 'localhost',
-        'PORT': '',
+        'NAME': 'database-1',
+        'USER': 'prashant4',
+        'PASSWORD': 'hApPy143143',
+        'HOST': '5432',
+        'PORT': 'database-1.c5cddooi5xmm.us-east-2.rds.amazonaws.com',
     }
 }
 
