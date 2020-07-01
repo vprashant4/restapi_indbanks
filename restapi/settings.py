@@ -85,11 +85,11 @@ WSGI_APPLICATION = 'restapi.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'database-1',
+        'NAME': 'demo_1',
         'USER': 'prashant4',
         'PASSWORD': 'hApPy143143',
-        'HOST': '5432',
-        'PORT': 'database-1.c5cddooi5xmm.us-east-2.rds.amazonaws.com',
+        'HOST': 'database-1.c5cddooi5xmm.us-east-2.rds.amazonaws.com',
+        'PORT': '5432',
     }
 }
 
