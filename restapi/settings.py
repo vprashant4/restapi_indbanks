@@ -147,7 +147,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 # Parse database configuration from $DATABASE_URL
 if os.getcwd() == '/app':
     import dj_database_url
-    db_from_env = dj_database_url.config(conn_max_age=500)
+    db_from_env = dj_database_url.config(env='DATABASE_URL', conn_max_age=500)
     DATABASES['default'].update(db_from_env)
 
     # Honor the 'X-Forwarded-Proto' header for request.is_secure()
