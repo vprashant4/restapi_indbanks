@@ -13,7 +13,6 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 import os
 from datetime import timedelta
 import django_heroku
-import dj_database_url
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -142,11 +141,6 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-
-DATABASES['default'] = dj_database_url.config(default='postgressql://prashant4:hApPy143143:@database-1.c5cddooi5xmm.us-east-2.rds.amazonaws.com/demo_1', conn_max_age=600)
-
-#Honor the 'X-forwarded-Proto' header for request.is_secure().
-SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 # if os.getcwd() == '/app':
 #     import dj_database_url
