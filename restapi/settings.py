@@ -117,8 +117,8 @@ REST_FRAMEWORK = {
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
     'PAGE_SIZE': 10,
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
-    'DEFAULT_PERMISSION_CLASSES': ['rest_framework.permissions.IsAuthenticated'],
-    'DEFAULT_AUTHENTICATION_CLASSES': ['rest_framework.authentication.SessionAuthentication'],
+    #'DEFAULT_PERMISSION_CLASSES': ['rest_framework.permissions.IsAuthenticated'],
+    #'DEFAULT_AUTHENTICATION_CLASSES': ['rest_framework.authentication.SessionAuthentication'],
     #'DEFAULT_AUTHENTICATION_CLASSES': ('rest_framework_simplejwt.authentication.JWTAuthentication',)
 }
 
@@ -144,22 +144,22 @@ STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 
-# Parse database configuration from $DATABASE_URL
-if os.getcwd() == '/app':
-    import dj_database_url
-    db_from_env = dj_database_url.config(env='DATABASE_URL', conn_max_age=500)
-    DATABASES['default'].update(db_from_env)
-
-    # Honor the 'X-Forwarded-Proto' header for request.is_secure()
-    SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
-
-    # Allow all host headers
-    ALLOWED_HOSTS = ['restapibanks.herokuapp.com']
-    DEBUG = True
-
-    # Static asset configuration
-    BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
+# # Parse database configuration from $DATABASE_URL
+# if os.getcwd() == '/app':
+#     import dj_database_url
+#     db_from_env = dj_database_url.config(env='DATABASE_URL', conn_max_age=500)
+#     DATABASES['default'].update(db_from_env)
+#
+#     # Honor the 'X-Forwarded-Proto' header for request.is_secure()
+#     SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+#
+#     # Allow all host headers
+#     ALLOWED_HOSTS = ['restapibanks.herokuapp.com']
+#     DEBUG = True
+#
+#     # Static asset configuration
+#     BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+#
 
 #  Set JWT Time Duration for 5 days
 # SIMPLE_JWT = {
