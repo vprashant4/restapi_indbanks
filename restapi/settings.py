@@ -85,7 +85,7 @@ WSGI_APPLICATION = 'restapi.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'demo_1',
         'USER': 'prashant4',
         'PASSWORD': 'hApPy143143',
@@ -145,8 +145,21 @@ STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 
-# Parse database configuration from $DATABASE_URL
-DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
+# define if on heroku environment
+in_heroku = 'in_heroku' in os.environ
+in_heroku = False
+if 'DATABASE_URL' in os.environ:
+    in_heroku = True
+
+if in_heroku:
+    DATABASES = {'default': dj_database_url.config(conn_max_age=500)}
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        }
+    }
 
 #  Set JWT Time Duration for 5 days
 # SIMPLE_JWT = {
