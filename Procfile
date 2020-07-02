@@ -1,1 +1,3 @@
-web: gunicorn restapi.wsgi
+web: gunicorn restapi.wsgi:application --log-file - --log-level debug
+python manage.py collectstatic --noinput
+manage.py migrate
