@@ -25,7 +25,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '&^*w+otuuu08t&jpqen60u^a0)+!%nnqa-e$$20amq!jg#u-y0'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = []
 
@@ -152,7 +152,7 @@ if os.getcwd() == '/app':
 
     #Allow all host headers
     ALLOWED_HOSTS = ['restapibanks.herokuapp.com']
-    DEBUG = True
+    DEBUG = False
 
     #Static asset configuration
     BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
