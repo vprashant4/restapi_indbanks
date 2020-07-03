@@ -13,11 +13,9 @@
   <p>pip install -r requirements.txt</p>
    <b><i>Documentation: Nested serializers representations</i></b>
   <p>https://www.django-rest-framework.org/api-guide/serializers/#writable-nested-representations</p>
-  <p><i>Datebase:/i></p>
+  <p><i>Datebase:</i></p>
    <p>https://github.com/snarayanank2/indian_banks</p>
   <p>***NOTE***</p>
   <p>The queries are case sensitive, which you have to pass it upper case letters.</p>
   </body>
  </html>
-
-Demo: https://restapibanks.herokuapp.com/
