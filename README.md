@@ -29,10 +29,10 @@
   <p>"bank": "https://restapibanks.herokuapp.com/api/bank/"</p>
   <p>"branches": "https://restapibanks.herokuapp.com/api/branches/"</p>
     
-   <p><b>APIs: No need login authentication to getting details through city, bank name and ifsc code</b></p>
+   <p><b>APIs: No need login authentication to getting details of city, bank name and ifsc code</b></p>
    <p>"bankbranches": "https://restapibanks.herokuapp.com/api/bankbranches/"</p>  
   
-   <b><i>Documentation: Nested serializers representations</i></b>
+   <b><i>Nested serializers representations</i></b>
   <p>https://www.django-rest-framework.org/api-guide/serializers/#writable-nested-representations</p
    
   <p><b>***NOTE***</b></p>
