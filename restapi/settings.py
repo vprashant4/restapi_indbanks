@@ -25,7 +25,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '&^*w+otuuu08t&jpqen60u^a0)+!%nnqa-e$$20amq!jg#u-y0'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = []
 
@@ -83,12 +83,12 @@ WSGI_APPLICATION = 'restapi.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': '',
-        'USER': '',
-        'PASSWORD': '',
-        'HOST': '',
-        'PORT': '',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'demo_1',
+        'USER': 'prashant4',
+        'PASSWORD': '143143hApPy',
+        'HOST': 'database-1.c5cddooi5xmm.us-east-2.rds.amazonaws.com',
+        'PORT': '5432',
     }
 }
 
@@ -113,12 +113,8 @@ AUTH_PASSWORD_VALIDATORS = [
 
 REST_FRAMEWORK = {
     'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend'],
-    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
-    'PAGE_SIZE': 10,
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
-    #'DEFAULT_PERMISSION_CLASSES': ['rest_framework.permissions.IsAuthenticated'],
-    #'DEFAULT_AUTHENTICATION_CLASSES': ['rest_framework.authentication.SessionAuthentication'],
-    #'DEFAULT_AUTHENTICATION_CLASSES': ('rest_framework_simplejwt.authentication.JWTAuthentication',)
+    'PAGE_SIZE': 10,
 }
 
 
@@ -156,12 +152,5 @@ if os.getcwd() == '/app':
 
     #Static asset configuration
     BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
-
-#  Set JWT Time Duration for 5 days
-# SIMPLE_JWT = {
-#     'ACCESS_TOKEN_LIFETIME': timedelta(days=5),
-#     'REFRESH_TOKEN_LIFETIME': timedelta(days=5),
-# }
 
 django_heroku.settings(locals())

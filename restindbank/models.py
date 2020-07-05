@@ -28,3 +28,18 @@ class Branches(models.Model):
     class Meta:
         managed = False
         db_table = 'branches'
+
+
+class BankBranches(models.Model):
+    ifsc = models.CharField(primary_key=True, max_length=11, blank=True)
+    bank_id = models.BigIntegerField(blank=True, null=True)
+    branch = models.CharField(max_length=74, blank=True, null=True)
+    address = models.CharField(max_length=300, blank=True, null=True)
+    city = models.CharField(max_length=50, blank=True, null=True)
+    district = models.CharField(max_length=50, blank=True, null=True)
+    state = models.CharField(max_length=26, blank=True, null=True)
+    bank_name = models.CharField(max_length=49, blank=True, null=True)
+
+    class Meta:
+        managed = False  # Created from a view. Don't remove.
+        db_table = 'bank_branches'
