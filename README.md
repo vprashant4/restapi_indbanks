@@ -23,7 +23,7 @@
   <p>https://docs.djangoproject.com/en/3.0/ref/models/querysets/#std:fieldlookup-icontains</p>
   
   <p><b>APIs: Support limit and offset parameters</b></p>
-  <p>api/branches/?bank_name=&limit=&offset= for example: bank_name=STATE&limit=10&offset=10</p>
+  <p>api/bankbranches/?bank_name=&limit=&offset= for example: bank_name=STATE&limit=10&offset=10</p>
   
   <p><b>APIs: Login authentication required for CRUD operations</b></p>
   <p>"bank": "https://restapibanks.herokuapp.com/api/bank/"</p>
