@@ -16,6 +16,6 @@
   <p><i>Datebase:</i></p>
    <p>https://github.com/snarayanank2/indian_banks</p>
   <p>***NOTE***</p>
-  <p>The queries are case sensitive, which you have to pass in uppercase letters.</p>
+  <p>The queries are case sensitive, which you have to pass parameters in an uppercase letter.</p>
   </body>
  </html>
