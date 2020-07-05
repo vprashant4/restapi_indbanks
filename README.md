@@ -9,6 +9,9 @@
   
   <p><b>Datebase</b></p>
    <p>https://github.com/snarayanank2/indian_banks</p>
+   
+   <p>In this project, I used AWS RDS PostgreSQL to store data</p>
+   <p>https://aws.amazon.com/rds/postgresql/</p>
   
   <p><b>Given a bank branch IFSC code, get branch details</b></p>
   <p><i>api/bankbranches/?ifsc= for example: ifsc=SBIN0000583</i></p>
