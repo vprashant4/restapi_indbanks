@@ -1,8 +1,6 @@
 <html>
   <body>
-    <p><h1>Django rest framework: This is the project about getting details of Indian Banks through a city, a bank name and an ifsc code</h1></p>
-    
-   <p><h3>How to use this app?</h3></p>
+   <p><h1>How to use this app?</h1></p>
   
   <p><b>Create virtual environment</b></p>
   <p>https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/#</p>
