@@ -23,10 +23,10 @@
   <p>https://docs.djangoproject.com/en/3.0/ref/models/querysets/#std:fieldlookup-icontains</p>
   
   <p><b>APIs: Support limit and offset parameters</b></p>
-  <p>api/bankbranches/?bank_name=&limit=&offset= for example: bank_name=STATE&limit=10&offset=10</p>
+  <p><i>api/bankbranches/?bank_name=&limit=&offset= for example: bank_name=STATE&limit=10&offset=10</i></p>
   
   <p><b>Get data in JSON format</b></p>
-  <p>api/bankbranches/?format=json or api/bankbranches/?city=DELHI&format=json</p>
+  <p><i>api/bankbranches/?format=json or api/bankbranches/?city=DELHI&format=json</i></p>
   
   <p><b>APIs: Login authentication required for CRUD operations</b></p>
   <p>"bank": "https://restapibanks.herokuapp.com/api/bank/"</p>
@@ -35,7 +35,7 @@
    <p><b>APIs: No need login authentication to getting details of city, bank name and ifsc code</b></p>
    <p>"bankbranches": "https://restapibanks.herokuapp.com/api/bankbranches/"</p>  
   
-   <b><i>Nested serializers representations</i></b>
+   <p><b>Nested serializers representations</b></p>
   <p>https://www.django-rest-framework.org/api-guide/serializers/#writable-nested-representations</p
    
   <p><b>***NOTE***</b></p>
