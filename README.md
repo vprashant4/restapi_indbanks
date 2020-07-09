@@ -32,7 +32,7 @@
   <p>"bank": "https://restapibanks.herokuapp.com/api/bank/"</p>
   <p>"branches": "https://restapibanks.herokuapp.com/api/branches/"</p>
     
-   <p><b>APIs: No need login authentication to getting details of city, bank name and ifsc code</b></p>
+   <p><b>APIs: Login authentication is not required to getting details of banks and through search parameters, city, bank name and ifsc code</b></p>
    <p>"bankbranches": "https://restapibanks.herokuapp.com/api/bankbranches/"</p>  
   
    <p><b>Nested serializers representations</b></p>
