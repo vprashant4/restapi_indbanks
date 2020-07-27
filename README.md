@@ -28,11 +28,13 @@
   <p><b>Get data in JSON format</b></p>
   <p><i>api/bankbranches/?format=json or api/bankbranches/?city=DELHI&format=json</i></p>
   
-  <p><b>APIs: Login authentication required for CRUD operations</b></p>
+  <p><b>Simple JWT provides a JSON Web Token authentication backend for the Django REST Framework authentication and need to access these URLs</b></p
   <p>"bank": "https://restapibanks.herokuapp.com/api/bank/"</p>
   <p>"branches": "https://restapibanks.herokuapp.com/api/branches/"</p>
-    
-   <p><b>APIs: Login authentication is not required to getting details of banks and through search parameters, city, bank name and ifsc code</b></p>
+  <p>How to curl the Simple JWT, an access token is the validity of 5 days and a refresh token is the validity of 6 days</p>
+  <p>Document: https://django-rest-framework-simplejwt.readthedocs.io/en/latest/getting_started.html#usage</p> 
+  
+   <p><b>Simple JWT authentication is not required to getting details of banks and through search parameters, city, bank name and ifsc code.</b></p>
    <p>"bankbranches": "https://restapibanks.herokuapp.com/api/bankbranches/"</p>  
   
    <p><b>Nested serializers representations</b></p>
