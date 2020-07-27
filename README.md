@@ -31,7 +31,7 @@
   <p><b>Simple JWT provides a JSON Web Token authentication backend for the Django REST Framework authentication and need to access these URLs</b></p
   <p>"bank": "https://restapibanks.herokuapp.com/api/bank/"</p>
   <p>"branches": "https://restapibanks.herokuapp.com/api/branches/"</p>
-  <p>How to curl the Simple JWT, an access token is the validity of 5 days and a refresh token is the validity of 6 days</p>
+  <p>How to curl the Simple JWT, 'an access token will have a validity of 5 days and a refresh token will have a validity of 6 days'</p>
   <p>Document: https://django-rest-framework-simplejwt.readthedocs.io/en/latest/getting_started.html#usage</p> 
   
    <p><b>Simple JWT authentication is not required to getting details of banks and through search parameters, city, bank name and ifsc code.</b></p>
