@@ -26,7 +26,7 @@
   <p><i>api/bankbranches/?bank_name=&limit=&offset= for example: bank_name=STATE&limit=10&offset=10</i></p>
   
   <p><b>Get data in JSON format</b></p>
-  <p><i>api/bankbranches/?format=json or api/bankbranches/?city=DELHI&format=json</i></p>
+  <p><i>api/bankbranches/?format=json</i> Or <i>api/bankbranches/?city=DELHI&format=json</i></p>
   
   <p><b>Simple JWT provides a JSON Web Token authentication backend for the Django REST Framework authentication and need to access these URLs</b></p
   <p>"bank": "https://restapibanks.herokuapp.com/api/bank/"</p>
