@@ -2,7 +2,7 @@
   <body>
    <p><h1>How to use this app?</h1></p>
   
-  <p><b>Heroku: This API Website is down due to the AWS RDS free trial is stopped this month.</b></p>
+  <p><b>Heroku: This API Website is down due to the AWS RDS free trial has stopped this month.</b></p>
   
   <p><b>Create virtual environment</b></p>
   <p>https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/#</p>
